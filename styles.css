@@ -1,0 +1,61 @@
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg,var(--bg),rgba(6, 16, 105, 0.411));color:var(--text);-webkit-font-smoothing:antialiased;
+  line-height:1.5;
+}
+.container{max-width:1000px;margin: 0 auto;padding:32px}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+
+.site-header{backdrop-filter:blur(6px);position:sticky;top:0;z-index:50;background:black;border-bottom:1px solid rgba(255,255,255,0.03);height: auto;}
+.brand{font-weight:700; color: white;}
+.site-nav{display:flex;gap:16px}
+.site-nav a{color:white;text-decoration:none;padding:8px;border-radius:6px}
+.site-nav a:hover{color:var(--text);background:white}
+.nav-toggle{display:none;background:blue;border:0;color:aqua;font-size:20px}
+
+#hero{display:flex;padding: 32px ;max-width:1000px;margin:0 auto;align-items: center;justify-content:space-between;}
+.hero-inner{flex: 1;max-width: 60%;white-space: normal;}
+.hero-photo{width: 350px;height: auto;object-fit: cover;border-radius: 50px;}
+
+
+.hero h1{font-size:2.2rem;margin:0 0 8px}
+.lead{color:var(--muted);margin-bottom:16px}
+.btn{background:rgba(25, 25, 112);color:white;color:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+.btn:hover{opacity:0.95}
+form{font-family:Verdana, Geneva, Tahoma, sans-serif;}
+
+
+
+
+
+
+ h2{text-align: center;color: rgba(25, 25, 112);}
+ p{font-family:Verdana, Geneva, Tahoma, sans-serif;}
+#about, #projects, #skills, #contact, #hobbies, #sport{margin-top:36px;background:whitesmoke;padding:20px;border-radius:var(--radius)}
+.grid{display: flex;grid-template-columns:repeat(3,1fr);gap:var(--gap);justify-content: space-between;flex: 1;}
+.card{padding:16px;border-radius:10px}
+.card h3{margin-top:0}
+.link{color:white;text-decoration:none;background-color:rgba(25, 25, 112);padding:10px 16px;border-radius:8px;}
+.skill-list{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0;justify-content: space-between;}
+.skill-list li{background:rgba(25, 25, 112);padding:8px 12px;border-radius:999px;color:white;}
+
+.site-footer{padding:20px 0;text-align: center;color: var(--muted);border-top:1px solid rgba(255,255,255,0.03);margin-top:40px}
+
+
+
+
+/* responsive */
+@media (max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+  .grid{grid-template-columns:1fr}
+  .site-nav{position:fixed;right:12px;top:64px;flex-direction:column;background:rgba(3,8,15,0.95);padding:12px;border-radius:8px;display:none}
+  .site-nav.open{display:flex}
+  .nav-toggle{display:block}
+  .container{padding:20px}
+  .hero h1{font-size:1.6rem}
+}
